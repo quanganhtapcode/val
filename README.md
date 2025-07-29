@@ -1,101 +1,60 @@
-# Vietnam Stock Valuation Tool
+# Stock Valuation Website
 
-A comprehensive web application for valuing Vietnamese stocks using multiple financial models including FCFE, FCFF, Justified P/E, and Justified P/B ratios.
+Ứng dụng web phân tích và định giá cổ phiếu Việt Nam sử dụng Python Flask và JavaScript.
 
-## 🚀 Live Demo
+## Tính năng
 
-Visit the live application: [https://yourusername.github.io/vietnam-stock-valuation](https://yourusername.github.io/vietnam-stock-valuation)
+- Phân tích dữ liệu tài chính của các công ty niêm yết trên VN-Index
+- Tính toán các chỉ số định giá (P/E, P/B, EV/EBITDA, etc.)
+- Hiển thị biểu đồ lịch sử giá cổ phiếu
+- So sánh các công ty trong cùng ngành
+- Giao diện web thân thiện và dễ sử dụng
 
-## 📋 Features
+## Cài đặt
 
-- **Real-time Stock Data**: Fetches live data from Vietnamese stock market
-- **Multiple Valuation Models**: 
-  - Free Cash Flow to Equity (FCFE)
-  - Free Cash Flow to Firm (FCFF) 
-  - Justified P/E Ratio
-  - Justified P/B Ratio
-- **Interactive Charts**: Historical trends and financial ratios visualization
-- **Investment Recommendations**: Buy/Hold/Sell recommendations based on 15% threshold
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
-- **Dark/Light Theme**: Toggle between themes
-- **PDF Export**: Generate valuation reports
-
-## 🛠️ Technologies Used
-
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Python Flask
-- **Charts**: Chart.js
-- **Data Source**: vnstock API
-- **Styling**: Custom CSS with CSS Variables
-
-## 📦 Installation & Setup
-
-### Prerequisites
-- Python 3.8+
-- pip (Python package manager)
-
-### Backend Setup
-1. Clone the repository:
+1. Clone repository:
 ```bash
-git clone https://github.com/yourusername/vietnam-stock-valuation.git
-cd vietnam-stock-valuation
+git clone https://github.com/quanganhtapcode/val.git
+cd val
 ```
 
-2. Install Python dependencies:
+2. Cài đặt dependencies:
 ```bash
-pip install flask flask-cors vnstock pandas numpy requests
+pip install -r requirements.txt
 ```
 
-3. Run the backend server:
+3. Chạy ứng dụng:
 ```bash
 python backend_server.py
 ```
 
-The server will start on `http://localhost:5000`
+4. Mở trình duyệt và truy cập: `http://localhost:5000`
 
-### Frontend Setup
-1. Open `index.html` in a web browser, or
-2. Use a local server like Live Server extension in VS Code
+## Cấu trúc dự án
 
-## 🌐 Deployment Options
+- `backend_server.py` - Server Flask chính
+- `app.js` - Logic JavaScript cho frontend
+- `index.html` - Giao diện người dùng
+- `style.css` - Styling CSS
+- `valuation_models.py` - Các mô hình định giá
+- `industry_data/` - Dữ liệu cổ phiếu theo ngành
+- `requirements.txt` - Dependencies Python
 
-### GitHub Pages (Static Frontend Only)
-1. Push your code to a GitHub repository
-2. Go to repository Settings > Pages
-3. Select source branch (usually `main`)
-4. Your site will be available at `https://yourusername.github.io/repository-name`
+## API Endpoints
 
-### Vercel (Recommended for Full Stack)
-1. Connect your GitHub repository to Vercel
-2. Configure build settings for Python backend
-3. Deploy with automatic SSL and CDN
+- `GET /api/stock/<symbol>` - Lấy dữ liệu cổ phiếu
+- `GET /api/current-price/<symbol>` - Lấy giá hiện tại
+- `POST /api/valuation/<symbol>` - Tính toán định giá
+- `GET /api/historical-chart-data/<symbol>` - Dữ liệu biểu đồ lịch sử
 
-### Heroku (Full Stack)
-1. Add `requirements.txt` and `Procfile`
-2. Deploy via Heroku CLI or GitHub integration
+## Công nghệ sử dụng
 
-## 📊 API Endpoints
+- **Backend**: Python Flask
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Data**: Vnstock API, VCI data
+- **Charts**: Chart.js
+- **Deployment**: GitHub Pages (static files)
 
-- `GET /api/stock/<symbol>` - Get stock information
-- `POST /api/valuation` - Calculate stock valuation
-- `GET /api/historical/<symbol>` - Get historical chart data
+## License
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-Created by quanganhdeptrai
-
-## ⚠️ Disclaimer
-
-This tool is for educational and informational purposes only. It should not be considered as financial advice. Always do your own research and consult with financial professionals before making investment decisions.
+MIT License

@@ -22,34 +22,55 @@ wheels/
 MANIFEST
 
 # Virtual Environment
-venv/
+.env
+.venv
 env/
+venv/
 ENV/
+env.bak/
+venv.bak/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
 # Logs
 *.log
 logs/
 
-# Environment variables
-.env
+# Cache
+.cache/
+*.cache
+
+# Temporary files
+*.tmp
+*.temp
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# API keys and secrets
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.production
+config.py
+secrets.py
 
-# Dependency directories
+# Node modules (if any)
 node_modules/
-
-# Production build
-dist/
-build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
