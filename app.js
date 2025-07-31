@@ -32,7 +32,7 @@ class StockValuationApp {
             justified_pb: 25
         };
         this.valuationResults = null;
-        this.apiBaseUrl = 'https://52.77.215.49';
+        this.apiBaseUrl = 'https://tickets-ii-fcc-va.trycloudflare.com';
         this.charts = {
             roeRoa: null,
             liquidity: null,
