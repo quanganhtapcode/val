@@ -32,7 +32,7 @@ class StockValuationApp {
             justified_pb: 25
         };
         this.valuationResults = null;
-        this.apiBaseUrl = 'https://54.151.153.196';
+        this.apiBaseUrl = 'http://54.151.153.196';
         this.charts = {
             roeRoa: null,
             liquidity: null,
