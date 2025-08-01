@@ -32,7 +32,7 @@ class StockValuationApp {
             justified_pb: 25
         };
         this.valuationResults = null;
-        this.apiBaseUrl = 'https://deeply-exception-consultation-ds.trycloudflare.com';
+        this.apiBaseUrl = 'https://erik-therapist-dash-lit.trycloudflare.com';
         this.charts = {
             roeRoa: null,
             liquidity: null,
